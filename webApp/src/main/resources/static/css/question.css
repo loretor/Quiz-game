@@ -1,0 +1,174 @@
+/* Global styles */
+body {
+    background-image: url('/images/background.png');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    font-family: 'Copperplate Gothic', 'Copperplate', fantasy;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Money ladder */
+.leftbar {
+    width: 10%;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #1b1b3a;
+    border: 3px solid gold;
+    padding: 10px;
+}
+
+.moneyPrices-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid gold;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.moneyPrices-container button:disabled {
+    color: darkgrey;
+    border: none;
+}
+
+.white-button {
+    background: linear-gradient(90deg, #f4a300, #ff6347) !important;
+    color: black !important;
+}
+
+/* Main content */
+.content{
+    width: 70%;
+}
+
+.quiz-container {
+    width: 100%;
+    background-color: #0a0a23;
+    border: 5px solid gold;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.lifelineResult-container{
+    width: 100%;
+    background-color: #0a0a23;
+    border: 5px solid gold;
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.question-box {
+    width: 80%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 25px;
+    border: 2px solid gold;
+    background-color: navy;
+}
+
+
+
+.answers-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    width: 80%;
+}
+
+.answers-container button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #0b3d91, #1e90ff); /*0b3d91*/
+    border: 2px solid gold;
+    color: white;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.answers-container button:hover:not(:disabled) {
+    background: gold;
+    color: black;
+}
+
+.answers-container button:disabled {
+    background-color: gray;
+    color: darkgray;
+    border: 2px solid #555;
+    cursor: not-allowed;
+}
+
+@keyframes blinking {
+    0% { background: linear-gradient(90deg, #0b3d91, #1e90ff); }
+    50% { background: linear-gradient(90deg, #f4a300, #ff6347); }
+    100% { background: linear-gradient(90deg, #0b3d91, #1e90ff); }
+}
+
+.hold-button {
+    animation: blinking 1s infinite;
+    cursor: wait;
+    pointer-events: none;
+}
+
+.correct-button {
+    background: linear-gradient(90deg, #66ff66, #006400) !important;
+    color: darkgray !important;
+    border: 2px solid darkgreen !important;
+}
+
+.wrong-button {
+    background: linear-gradient(90deg, #ff6666, #990000) !important;
+    color: darkgray !important;
+    border: 2px solid rgb(224, 65, 16) !important;
+}
+
+.lifelineUsed{
+    color: orange;
+}
+
+/* Lifelines */
+.rightbar {
+    width: 10%;
+    background-color: #1b1b3a;
+    border: 3px solid gold;
+    padding: 10px;
+}
+
+.lifeline-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background: darkred;
+    border: 2px solid gold;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.lifeline-container button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}

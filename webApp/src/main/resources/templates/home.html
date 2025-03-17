@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Who Wants to Be a Millionaire?</title>
+        <link href="../static/css/home.css" th:href="@{/css/home.css}" rel="stylesheet" /> 
+    </head>
+    <body>
+        <div class="main-container">
+            <img src="../static/images/logo.png" th:src="@{images/logo.png}" class="logo"/>
+
+            <div class="content-container">
+                <h1 class="title">Welcome to</h1>
+                <h1 class="title">Who Wants to Be a Millionaire</h1>
+                <a th:href="question" class="play-button">Play</a>
+            </div>
+        </div>
+    </body>
+</html>

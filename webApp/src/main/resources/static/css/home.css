@@ -1,0 +1,112 @@
+/* Imposta uno sfondo dinamico */
+body {
+    background-image: url('/images/background.png');
+    background-size: cover;
+    background-position: center center;
+    font-family: 'Copperplate Gothic', 'Copperplate', fantasy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+/* Animazione per lo sfondo dinamico */
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Contenitore centrale */
+.main-container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.content-container {
+    background-color: #0a0a23;
+    padding: 20px;
+    border: 5px solid gold;
+    border-radius: 10px;
+}
+
+/* Logo */
+.logo {
+    width: 500px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Titolo con effetto luminoso */
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFD700; /* Colore dorato */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.7);
+    margin-bottom: 30px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Game over luminoso */
+.title-game-over{
+    font-size: 36px;
+    font-weight: bold;
+    color: #e31d1d; /* Colore dorato */
+    text-shadow: 0 0 10px rgba(233, 4, 4, 0.7), 0 0 20px rgba(255, 0, 0, 0.7);
+    margin-bottom: 30px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Win luminoso */
+.title-win{
+    font-size: 36px;
+    font-weight: bold;
+    color: #279c30; /* Colore dorato */
+    text-shadow: 0 0 10px rgba(56, 164, 35, 0.7), 0 0 20px rgba(26, 157, 3, 0.7);
+    margin-bottom: 30px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Bottone 'Play' */
+.play-button {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #0b3d91, #1e90ff);
+    color: white;
+    padding: 20px 40px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    border: 2px solid gold;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Aggiungi ombra per il bottone */
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Hover per il bottone */
+.play-button:hover {
+    background: gold;
+    color: black;
+}
+
+/* Animazione fade-in per logo e titolo */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bottone attivo */
+.play-button:active {
+    background: linear-gradient(90deg, #004c99, #003366);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8); /* Luce dorata */
+}
+
+

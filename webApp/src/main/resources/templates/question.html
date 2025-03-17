@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Wants to Be a Millionaire?</title>
+    <link href="../static/css/question.css" th:href="@{/css/question.css}" rel="stylesheet" />
+    <script src="/js/question.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- path -->
+        <div class="leftbar" >
+            <div class="moneyPrices-container" th:each="moneyPrice, iterStat: ${moneyPrices}">
+                <button th:text="${iterStat.index+1} + '. ' + ${moneyPrice.value}"
+                        th:disabled="${moneyPrice.isReached}" 
+                        th:classappend="${currentQuestion.id == iterStat.index+1} ? 'white-button' : ''"> <!-- add dinamically a white-button class for the current index-->
+                    MoneyPrice</button>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <!-- question -->
+            <div class="quiz-container">
+                <div class="question-box" th:text="${currentQuestion.text}">Question?</div>
+
+                <div class="answers-container">
+                    <div th:each="answer : ${currentQuestion.answers}"> 
+                        <button th:id="'answer-' + ${answer.id}"
+                                th:value="${answer.id}" 
+                                th:attr="onclick='processAnswer(' + ${answer.id} + ')'" >
+                                <span style="color: orange;" th:text="${'ABCD'.charAt(answer.id)} + ': '"></span> 
+                                <span th:text="${answer.text}"> Answer Text</span>
+                        </button>
+                    </div>
+                </div>
+            </div> 
+
+            <!-- show the result of the actions of the buttons -->
+             <div class="lifelineResult-container">
+                <p>Lifeline Used: </p>
+                <p id="lifelineUsed" class="lifelineUsed">None</p>
+                
+                <p id="lifelineResult"></p>
+             </div>
+        </div>
+           
+
+        <div class="rigthbar">
+            <div class="lifeline-container" th:each="lifeline, iterStat : ${lifelines}">
+                <button th:id="'button-' + ${iterStat.index}" 
+                        th:disabled="${!lifeline.active}" 
+                        th:text="${lifeline.name}"
+                        th:onclick="'useLifeline_' + ${iterStat.index} + '()'"> 
+                Lifeline button</button>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>
