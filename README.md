@@ -18,6 +18,10 @@ The application includes:
 - HTTP calls to navigate between different views.
 The frontend is built using HTML, CSS, and some JavaScript for handling AJAX requests and frontend logic. Additionally, Thymeleaf is used to pass information from the web application to the frontend views.
 
+<p align="center">
+  <img src="https://github.com/loretor/Quiz-game/blob/main/webApp/src/main/resources/static/images/github/gif1.gif" alt="Demo">
+</p>
+
 ## Game rules
 
 As in the original game, the user must correctly answer 15 questions.
