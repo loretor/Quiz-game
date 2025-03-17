@@ -1,5 +1,9 @@
 # Who Wants to Be a Millionaire Clone
 
+<p align="center">
+  <img src="https://github.com/loretor/Quiz-game/blob/main/webApp/src/main/resources/static/images/logo.png" />
+</p>
+
 This project was created to test my knowledge of Java Spring and Spring Boot.
 
 ## Project overview
