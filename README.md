@@ -28,14 +28,11 @@ As in the original game, the user must correctly answer 15 questions.
 
 The user has access to four lifelines:
 - 50-50: Removes two incorrect answers.
-<p align="center">
-  <img src="https://github.com/loretor/Quiz-game/blob/main/webApp/src/main/resources/static/images/github/screenshot1.png" alt="Demo">
-</p>
 - Phone a Friend: Allows the user to browse the internet for 1 minute.
 - Double Dip: Must be selected before answering. It grants the user a second chance to answer.
 - Ask the Audience: Provides help from the audience regarding the possible answers.
 <p align="center">
-  <img src="https://github.com/loretor/Quiz-game/blob/main/webApp/src/main/resources/static/images/github/screenshot2.png" alt="Demo">
+  <img src="https://github.com/loretor/Quiz-game/blob/main/webApp/src/main/resources/static/images/github/screenshot1.png" alt="Demo">
 </p>
 
 ## Future improvements
